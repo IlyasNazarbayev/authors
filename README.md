@@ -58,16 +58,6 @@
 
             randomTextElement.textContent = `"${randomTextData.text}"`;
             authorTextElement.textContent = `— ${randomTextData.author}`;
-        };
-
-        // Обновляем текст и автора при клике на странице
-        document.body.addEventListener("click", function() {
-            const randomTextElement = document.getElementById("randomText");
-            const authorTextElement = document.getElementById("authorText");
-            const randomTextData = getRandomText();
-
-            randomTextElement.textContent = `"${randomTextData.text}"`;
-            authorTextElement.textContent = `— ${randomTextData.author}`;
         });
     </script>
 </body>
