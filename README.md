@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -52,6 +51,16 @@
 
         // Показываем случайный текст и автора при загрузке страницы
         window.onload = function() {
+            const randomTextElement = document.getElementById("randomText");
+            const authorTextElement = document.getElementById("authorText");
+            const randomTextData = getRandomText();
+
+            randomTextElement.textContent = `"${randomTextData.text}"`;
+            authorTextElement.textContent = `— ${randomTextData.author}`;
+        };
+
+        // Обновляем текст и автора при клике на странице
+        document.body.addEventListener("space", function() {
             const randomTextElement = document.getElementById("randomText");
             const authorTextElement = document.getElementById("authorText");
             const randomTextData = getRandomText();
